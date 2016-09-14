@@ -17,9 +17,11 @@ func main() {
 			if err != nil {
 				fmt.Println("\nError deleting servers with pattern:%s error:%v\n", pattern, err)
 			} else {
-				fmt.Printf("\nSuccess.\n")
+				fmt.Println("\nSuccess.\n")
 			}
 		}
+	} else {
+		fmt.Println("You must supply an option and right now all we understand is 'pattern' folled by a substring to match hosts to be deleted.  There is no prompting.")
 	}
 }
 
