@@ -7,6 +7,10 @@ import (
 )
 
 func main() {
+	if len(os.Args) < 2 {
+		fmt.Println("You must supply an option and right now all we understand is 'pattern' folled by a substring to match hosts to be deleted.  There is no prompting.")
+		os.Exit(1)
+	}
 	operation := os.Args[1]
 	pattern := os.Args[2]
 	if operation == "pattern" {
